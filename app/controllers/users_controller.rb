@@ -1,11 +1,11 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: %i[ show update destroy ]
+  # before_action :set_user, only: %i[ show update destroy ]
 rescue_from ActiveRecord::RecordInvalid, with: :invalid_entry
 rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
 
-  # GET /users/1
+  # Persist a logged in user
   def show
-    user = User.find_by(id: session[:user_id])
+    user = User.find_by(id: session[:user_id]) 
     if user
         render json: user
     else
@@ -13,14 +13,14 @@ rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
     end
   end
 
-  # POST /users
+   # Create a user account on Signup
   def create
-      @user = User.create!(user_params)
-       if @user.valid?
+      user = User.create!(user_params)
+       if user.valid?
             session[:user_id] = user.id
-            render json: @user, status: :created
+            render json: user, status: :created
         else
-            render json: { errors: @user.errors.full_messages }, status: :unprocessable_entity
+            render json: { errors: user.errors.full_messages }, status: :unprocessable_entity
         end
   end
 

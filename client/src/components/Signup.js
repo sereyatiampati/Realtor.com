@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useNavigate } from "react-router-dom";
 
 
-function Signup({handleUser}) {
+function Signup({onLogin}) {
     const navigate = useNavigate();
     const [errors, setErrors] = useState([]);
     const [regForm, setRegForm] = useState({
@@ -32,7 +32,7 @@ function Signup({handleUser}) {
             if (res.ok){
                 res.json().then((newUser)=> {
                     navigate ('/')
-                  return  handleUser(newUser)});
+                  return  onLogin(newUser)});
             } else {
                 res.json().then((err)=> setErrors(err.errors));
             }
@@ -57,7 +57,7 @@ function Signup({handleUser}) {
                 <div class="policy">
                     <p>By clicking Sign up, you agree to our<a href="#">Terms and Conditions</a>.</p>
                     {
-                        errors.length > 0 ? errors.map((err) => (<li style={{color: "red", fontSize: "12px"}}key={err}>{err}</li>)) : ""
+                       errors?.length > 0 ? errors.map((err) => (<li style={{color: "red", fontSize: "12px"}}key={err}>{err}</li>)) : ""
                     }
                 </div>
             </div>

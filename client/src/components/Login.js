@@ -1,7 +1,7 @@
 import React,{ useState } from 'react'
 import { useNavigate } from "react-router-dom";
 
-function Login({handleUser}) {
+function Login({onLogin}) {
     const navigate = useNavigate();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -20,7 +20,7 @@ function Login({handleUser}) {
           if (r.ok) {
             r.json().then((user) =>{
               navigate ('/')
-             return  handleUser(user)});
+             return  onLogin(user)});
           } else {
             r.json().then((err) => setErrors(err.errors));
           }
@@ -42,7 +42,7 @@ function Login({handleUser}) {
                     <div class="input-text-signup"> <input type="text" required value={email} onChange={(e)=>setEmail(e.target.value)}/> <i class="fa fa-envelope-o"></i> <label>E-mail</label> </div>
                     <div class="input-text-signup"> <input type="password" id="password_input_signin" required value={password} onChange={(e)=>setPassword(e.target.value)}/> <i class="fa fa-eye-slash change_eye"></i> <label>Password</label> </div>
                     {
-                            errors.length > 0 ? errors.map((error)=><li style={{color: "red", fontSize: "12px"}} key={error}>{error}</li>) : ""
+                            errors?.length > 0 ? errors.map((error)=><li style={{color: "red", fontSize: "12px"}} key={error}>{error}</li>) : ""
                     }
                     <div class="signup-button"> <button type='submit'>Sign in</button> </div>
                     <div class="policy">

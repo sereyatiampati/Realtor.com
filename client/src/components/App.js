@@ -1,27 +1,39 @@
 import './App.css';
 import React, { useEffect, useState } from "react";
 import  Signup  from "./Signup";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Login from './Login';
 import NavBar  from "./Navbar";
 import Listings from './Listings';
 
 function App() {
 const [user, setUser]=useState(null)
+const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-function handleUser(newUser) {
-  setUser(newUser)
-}
+useEffect(() => {
+  fetch("/me").then((response) => {
+    if (response.ok) {
+      response.json().then((user) => setUser(user));
+    }
+  });
+}, []);
+
+useEffect(() => {
+  if (user) {
+    setIsLoggedIn(true);
+  } else {
+    setIsLoggedIn(false);
+  }
+}, [user]);
+
   return (
     <div className="App">
-      <Router>
-        <NavBar user={user} setUser={setUser}/>
+        <NavBar user={user} setUser={setUser} isLoggedIn={isLoggedIn}/>
         <Routes>
             <Route path="/" element={<Listings />} />
-            <Route path="/login" element={<Login handleUser={handleUser}/>} />
-            <Route path="/join-realtor.com" element={<Signup handleUser={handleUser}/>} />
+            <Route path="/login" element={<Login onLogin={setUser}/>} />
+            <Route path="/join-realtor.com" element={<Signup onLogin={setUser}/>} />
           </Routes>
-      </Router>
     </div>
   );
 }
