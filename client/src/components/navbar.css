@@ -26,9 +26,7 @@
     background-color: rgba(173, 216, 230, 0.856);
   }
   .active{
-    padding: 8px;
-    background-color: teal;
-    color: white;
+    color: #4A60A1;
    }
    nav a:hover{
     color: black;
@@ -36,3 +34,14 @@
  .start-log{
     color: red;
  }  
+ .text-brand {
+  color: #000000;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+@media (max-width: 767px) {
+  .text-brand {
+    font-size: 1.8rem;
+  }
+}
