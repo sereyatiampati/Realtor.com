@@ -1,32 +1,3 @@
-/* .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-} */
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
 @import 'bootstrap/dist/css/bootstrap.min.css';
@@ -36,13 +7,13 @@
     margin: 0
 }
 
-.container {
+/* .container {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #fff
-}
+} */
 
 .card {
     height: 510px;
@@ -289,4 +260,28 @@ input[type="password"] {
   .card-header-a .card-title-a a {
     color: #ffffff;
     text-decoration: none;
+  }
+div.listing-form{
+    display: block;
+    text-align: center;
+}
+
+div.listing-form form
+{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+div#property-carousel div.container{
+    text-align: center;
+    margin-top: 70px;
+}
+
+div.carousel-item-b.swiper-slide{
+    width: calc(27%);
+  }
+  section.section-property.section-t8{
+    display: flex;
+    padding: 4rem;
   }

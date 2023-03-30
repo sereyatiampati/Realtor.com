@@ -1,5 +1,5 @@
-import React from 'react'
-import EachListing from "./EachListing";
+import React, {useState, useEffect} from 'react'
+import HomeListing from "./HomeListing";
 import { Link } from 'react-router-dom'
 
 
@@ -26,7 +26,7 @@ function Properties({properties}) {
 
         <div id="property-carousel" class="swiper">
           <div class="swiper-wrapper"  style={{display: 'flex', flexWrap: 'wrap', width: '100%', height: '100%', flexDirection: 'row', paddingRight: '0', justifyContent: 'center'}} >
-            {properties.map((listing=> <EachListing key={listing} listing={listing}/>))}
+            {properties.map((listing=> <HomeListing key={listing} listing={listing}/>))}
           </div>
         </div>
         <div class="propery-carousel-pagination carousel-pagination"></div>

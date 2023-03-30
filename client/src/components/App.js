@@ -4,7 +4,9 @@ import  Signup  from "./Signup";
 import { Routes, Route } from "react-router-dom";
 import Login from './Login';
 import NavBar  from "./Navbar";
-import Listings from './Listings';
+import HomePage from './HomePage';
+import AddListing from './AddListing';
+import MyProperties from './MyProperties';
 
 function App() {
 const [user, setUser]=useState(null)
@@ -30,9 +32,11 @@ useEffect(() => {
     <div className="App">
         <NavBar user={user} setUser={setUser} isLoggedIn={isLoggedIn}/>
         <Routes>
-            <Route path="/" element={<Listings />} />
+            <Route path="/" element={<HomePage />} />
             <Route path="/login" element={<Login onLogin={setUser}/>} />
             <Route path="/join-realtor.com" element={<Signup onLogin={setUser}/>} />
+            <Route path="/my-properties" element={<MyProperties user={user}/>} />
+            <Route path="/add-property"  element={<AddListing user={user}/>}/>
           </Routes>
     </div>
   );
