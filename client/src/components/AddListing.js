@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-function AddListing({user}) {
+function AddListing() {
     const [address, setAddress] = useState('');
     const [propertyType, setPropertyType] = useState('');
     const [areaInSqm, setAreaInSqm] = useState('');
@@ -47,12 +47,12 @@ function AddListing({user}) {
     }
       
     return (
-    <div className='container listing-form'>
+    <div className='listing-form'>
         <h2>Property Information Form</h2>
         <form onSubmit={handleSubmit} style={{width: "750px"}}>
       <div className="form-group" >
         <label htmlFor="address">Address<span style={{color:"red"}}>*</span></label>
-        <input type="text" className="form-control" id="address" name="address" value={address} onChange={(event) => setAddress(event.target.value)} required />
+        <input type="text" className="form-control" id="address" name="address" defaultValue={address} onChange={(event) => setAddress(event.target.value)} required />
       </div>
 
       <div className="form-group">
@@ -92,9 +92,6 @@ function AddListing({user}) {
         {
             errors?.length > 0 ? errors.map((error)=><li style={{color: "red", fontSize: "12px"}} key={error}>{error}</li>) : ""
         }
-
-      <input type="hidden" name="user_id"  required />
-
       <button type="submit" className="btn btn-primary" style={{marginTop: "15px"}}>Submit</button>
     </form>
     </div>

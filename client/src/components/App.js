@@ -36,7 +36,7 @@ useEffect(() => {
             <Route path="/login" element={<Login onLogin={setUser}/>} />
             <Route path="/join-realtor.com" element={<Signup onLogin={setUser}/>} />
             <Route path="/my-properties" element={<MyProperties user={user}/>} />
-            <Route path="/add-property"  element={<AddListing user={user}/>}/>
+            <Route path="/add-property"  element={<AddListing />}/>
           </Routes>
     </div>
   );

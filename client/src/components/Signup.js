@@ -40,7 +40,7 @@ function Signup({onLogin}) {
       }
 
     return (
-<form class="container" onSubmit={handleSignupSubmit}>
+<form class="container" onSubmit={handleSignupSubmit} style={{margin: "50px 350px"}}>
     <div class="card" style={{ height: "650px"}}>
         <div class="user signup_form">
             <div class="form">
@@ -59,7 +59,6 @@ function Signup({onLogin}) {
                 <div class="signup-button"> <button type='submit'>Sign up</button> </div>
                 <div class="policy">
                     <p>By clicking Sign up, you agree to our<a href="#">Terms and Conditions</a>.</p>
-
                 </div>
             </div>
             <div class="image-box"> <img src="https://media.istockphoto.com/id/1415886887/photo/freshly-painted-craftsman-bungalow-house.jpg?b=1&s=170667a&w=0&k=20&c=HE7W2sfriTozr-MghVy2XnadF7bXvgDljKdzt4-iq_I="/> </div>

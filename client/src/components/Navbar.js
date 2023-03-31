@@ -16,6 +16,15 @@ function NavBar({user, setUser, isLoggedIn}){
     });
   }
 
+  function handleDeleteAccount() {
+    fetch("/user", { method: "DELETE" }).then((r) => {
+      if (r.ok) {
+        setUser(null);
+        navigate('/join-realtor.com')
+      }
+    });
+  }
+
   return (<>
   <nav class="navbar navbar-expand-lg navbar-light static-top" >
   <div class="container">
@@ -44,6 +53,7 @@ function NavBar({user, setUser, isLoggedIn}){
           <li >
         <NavDropdown title={user.username}>
           <NavDropdown.Item onClick={handleLogoutClick}>Logout</NavDropdown.Item>
+          <NavDropdown.Item onClick={handleDeleteAccount} > <i class="bi bi-person-x text-danger" ></i>Delete Account</NavDropdown.Item>
         </NavDropdown>
         </li>
         )}
