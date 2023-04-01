@@ -49,4 +49,21 @@ App
 
 * responsive design
 * view best sellers in carousels
+* View listings
 
+## Front-end Sample Design
+* Landing page
+<img
+  src="./readme-images/homepage.png"
+  alt="Realtor.com Landing Page"
+  title="Homepage">
+* Login
+<img
+  src="./readme-images/login.png"
+  alt="Realtor.com Landing Page"
+  title="Homepage">
+* Signup
+<img
+  src="./readme-images/signup.png"
+  alt="Realtor.com Landing Page"
+  title="Homepage">
