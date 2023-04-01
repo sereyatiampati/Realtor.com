@@ -10,4 +10,6 @@ get '/me', to: 'users#show'
 delete '/logout', to: 'sessions#destroy'
 
 get '/my-listings', to: 'listings#show_user_listings'
+
+delete '/user', to: 'users#destroy'
 end
