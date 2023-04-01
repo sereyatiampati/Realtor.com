@@ -1,6 +1,7 @@
 class ListingsController < ApplicationController
   before_action :set_listing, only: %i[ show update destroy ]
   rescue_from ActiveRecord::RecordInvalid, with: :invalid_entry
+  rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
   before_action :authorize
 
   # GET /listings
@@ -30,7 +31,7 @@ class ListingsController < ApplicationController
 
   # PATCH/PUT /listings/1
   def update
-    if @listing.update(listing_params)
+    if @listing.update!(listing_params)
       render json: @listing
     else
       render json: @listing.errors, status: :unprocessable_entity
@@ -59,5 +60,9 @@ class ListingsController < ApplicationController
 
     def authorize
       return render json: { errors: ["Not authorized"] }, status: :unauthorized unless session.include? :user_id
+    end
+
+    def record_not_found
+      render json: {errors: ["Record Not Found"]}, status: :not_found
     end
 end
