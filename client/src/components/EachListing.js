@@ -1,8 +1,18 @@
-import React from 'react'
-import { Alert } from 'react-bootstrap';
+import {useNavigate } from "react-router-dom";
 
-function EachListing({listing}) {
-  const {address, property_type, area_in_sqm, beds, baths, garages, price, image_url} = listing
+function EachListing({listing, onDelete}) {
+  const {id, address, property_type, area_in_sqm, beds, baths, garages, price, image_url} = listing
+  const navigate = useNavigate()
+
+  function handleDelete(id) {
+    fetch(`/listings/${id}`, { method: "DELETE" }).then((r) => {
+      if (r.ok) {
+        console.log("Deleted")
+        onDelete()
+      }
+    });
+  }
+
     return (
         <>
         <div class="carousel-item-b swiper-slide" style={{margin: '2rem'}}>
@@ -51,6 +61,10 @@ function EachListing({listing}) {
                   </div>
                 </div>
               </div>
+              <div>
+                <button type="button" class="btn btn-light" style={{border: '1px black solid',  marginRight: '10px'}} onClick={()=>handleDelete(id)}> <i class="bi bi-trash3-fill text-danger"></i>Delete</button>
+                <button type="button" class="btn btn-light ml-2 px-1" style={{border: '1px black solid', marginLeft: '10px'}} onClick={()=>navigate(`/property/${id}`)}> <i class="bi bi-pen text-primary"></i>Edit</button>
+                </div>
             </div>
         </>
     )

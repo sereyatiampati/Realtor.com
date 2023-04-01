@@ -1,8 +1,7 @@
-import React from 'react'
 import "./listings.css"
-import Slide1 from "./../slide-1.jpg";
-import Slide2 from "./../slide-2.jpg";
-import Slide3 from "./../slide-3.jpg";
+import Slide1 from "./../img/slide-1.jpg";
+import Slide2 from "./../img/slide-2.jpg";
+import Slide3 from "./../img/slide-3.jpg";
 
 function Carousel() {
     return(<>

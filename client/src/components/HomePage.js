@@ -1,4 +1,4 @@
-import React from 'react'
+
 import Carousel from "./Carousel";
 import Services from './Services';
 import Properties from "./Properties";

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import {NavDropdown} from 'react-bootstrap'
 import { NavLink, useNavigate } from "react-router-dom";
 import "./navbar.css";
@@ -45,9 +45,9 @@ function NavBar({user, setUser, isLoggedIn}){
         <li class="nav-item">
         <NavLink to="/my-properties" activeClassName="active"> MY PROPERTIES</NavLink>
         </li>
-        <li class="nav-item">
+        {/* <li class="nav-item">
         <NavLink to="/add-property" activeClassName="active"> ADD LISTING </NavLink>
-        </li>
+        </li> */}
         
         {user && (
           <li >

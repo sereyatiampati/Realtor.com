@@ -1,4 +1,4 @@
-import React from 'react'
+
 
 function Footer() {
     return(
@@ -107,7 +107,7 @@ function Footer() {
   
   <div class="text-center p-4" style={{backgroundColor: "rgba(0, 0, 0, 0.025)"}}>
     © 2023 Copyright:
-    <a class="text-reset fw-bold" href="https://github.com/sereyatiampati">Emilly Tiampati</a>
+    <a class="text-reset fw-bold" href="https://github.com/sereyatiampati">Realtors PLC</a>
   </div>
 
 </footer>

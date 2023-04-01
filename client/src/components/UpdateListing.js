@@ -118,7 +118,7 @@ function UpdateListing() {
 
       <div class="form-group">
       <label htmlFor="property_type">Property Type<span style={{color:"red"}}>*</span></label>
-        <select class="form-control" id="exampleFormControlSelect1" name="property_type" onChange={(event) => setPropertyType(event.target.value)} defaultValue={property_type}>
+        <select class="form-control" id="exampleFormControlSelect1" name="property_type" onChange={(event) => setPropertyType(event.target.value)} value={property_type}>
           <option value="" disabled selected>Select property type</option>
           <option value="Rent">Rent</option>
           <option value="Lease">Lease</option>

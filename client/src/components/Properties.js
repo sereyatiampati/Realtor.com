@@ -1,4 +1,3 @@
-import React, {useState, useEffect} from 'react'
 import HomeListing from "./HomeListing";
 import { Link } from 'react-router-dom'
 
