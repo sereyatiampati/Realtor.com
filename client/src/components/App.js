@@ -5,8 +5,9 @@ import { Routes, Route } from "react-router-dom";
 import Login from './Login';
 import NavBar  from "./Navbar";
 import HomePage from './HomePage';
-import AddListing from './AddListing';
+// import AddListing from './AddListing';
 import MyProperties from './MyProperties';
+import UpdateListing from "./UpdateListing";
 
 function App() {
 const [user, setUser]=useState(null)
@@ -35,8 +36,8 @@ useEffect(() => {
             <Route path="/" element={<HomePage />} />
             <Route path="/login" element={<Login onLogin={setUser}/>} />
             <Route path="/join-realtor.com" element={<Signup onLogin={setUser}/>} />
-            <Route path="/my-properties" element={<MyProperties user={user}/>} />
-            <Route path="/add-property"  element={<AddListing />}/>
+            <Route path="/my-properties" element={<MyProperties/>} />
+            <Route path="/property/:id"  element={<UpdateListing />}/>
           </Routes>
     </div>
   );
