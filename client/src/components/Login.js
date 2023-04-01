@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useNavigate } from "react-router-dom";
+import Footer from './Footer';
 
 function Login({onLogin}) {
     const navigate = useNavigate();
@@ -29,7 +30,8 @@ function Login({onLogin}) {
     }
 
     return (
-        <form class="container" onSubmit={handleSubmit} style={{margin: "100px 350px"}}>
+      <>
+        <form class="container" onSubmit={handleSubmit} style={{margin: "60px 350px"}}>
         <div class="card">
             <div class="user signin_form">
                 <div class="image-box"> <img src="https://media.istockphoto.com/id/1416166526/photo/businessman-using-laptop-to-search-planning-and-investing-in-real-estate-property-management.jpg?b=1&s=170667a&w=0&k=20&c=N-TTs4EXo4oqMeOd_4XFxM-_9jehteKCfdhZVDxnf6U="/> </div>
@@ -52,6 +54,8 @@ function Login({onLogin}) {
             </div>
         </div>
     </form>
+    <Footer/>
+    </>
         )
     }
     export default Login;

@@ -2,6 +2,7 @@ import {useState, useEffect} from 'react'
 import EachListing from "./EachListing";
 import { Link, useNavigate } from "react-router-dom";
 import Button from 'react-bootstrap/Button';
+import Footer from './Footer';
 
 function MyProperties() {
     const [myListings, setMyListings] = useState([]);
@@ -44,6 +45,7 @@ function MyProperties() {
                 )
             }
           </div>
+          <Footer/>
           </div>
         </>
     )
