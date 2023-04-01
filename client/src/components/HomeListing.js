@@ -1,6 +1,4 @@
-import React from 'react'
-
-function EachListing({listing}) {
+function HomeListing({listing}) {
   const {address, property_type, area_in_sqm, beds, baths, garages, price, image_url} = listing
     return (
         <>
@@ -55,4 +53,4 @@ function EachListing({listing}) {
     )
 }
 
-export default EachListing;
+export default HomeListing;
