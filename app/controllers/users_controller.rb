@@ -24,16 +24,13 @@ rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
         end
   end
 
-  # PATCH/PUT /users/1
-  # def update
-  #    @user.update!(user_params)
-  #     render json: @user
-  # end
-
-  # # DELETE /users/1
-  # def destroy
-  #   @user.destroy
-  # end
+  # DELETE /users/1 Delete user account from database
+  def destroy
+    return render json: { error: "Not authorized" }, status: :unauthorized unless session.include? :user_id
+    user=User.find_by(id: session[:user_id])
+    user.destroy
+    head :no_content
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
