@@ -67,3 +67,8 @@ App
   src="./readme-images/signup.png"
   alt="Realtor.com Landing Page"
   title="Homepage">
+
+  ### Contact
+  [See contacts](https://github.com/sereyatiampati)
+
+  Copyright © 2023. All rights reserved.
