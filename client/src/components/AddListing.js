@@ -1,4 +1,5 @@
-import React, {useState} from 'react'
+import {useState} from 'react'
+import {useNavigate, useParams} from 'react-router-dom'
 
 function AddListing() {
     const [address, setAddress] = useState('');
@@ -10,8 +11,11 @@ function AddListing() {
     const [price, setPrice] = useState('');
     const [image, setImage] = useState('');
     const [errors, setErrors] = useState([]);
+    const navigate = useNavigate()
+    const {id}=useParams()
   
     function handleSubmit (event){
+      
       event.preventDefault();
       setErrors([])
       fetch("/listings", {
@@ -40,6 +44,7 @@ function AddListing() {
           setGarages("");
           setPrice("");
           setImage("");
+          navigate('/my-properties')
         } else {
           r.json().then((err) => setErrors(err.errors));
         }
