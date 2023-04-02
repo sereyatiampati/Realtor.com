@@ -12,11 +12,11 @@ This project was deployed on different platforms namely [vercel](https://vercel.
 
 Front end
 * [Realtor.com React Client Gitbub Repository ](https://github.com/sereyatiampati/Realtor-React-Front-end)
-* [Deployed live link](https://realtor-frontend-puce.vercel.app/)
+* [Deployed live link](https://realtor-sereyatiampati.vercel.app/)
 
 Back end
 * [Realtor.com Rails Server API Gitbub Repository ](https://github.com/sereyatiampati/Realtor-Rails-API-Backend)
-* [Deployed live link](https://realtor-com.onrender.com/listings)
+* [Deployed live link for one of the endpoints](https://realtor-com.onrender.com/listings) 
 
 ### Setup Requirements
 * Ruby 3.0.0 or higher
