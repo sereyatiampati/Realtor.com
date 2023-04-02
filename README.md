@@ -11,12 +11,12 @@ Realtor.com is a a website that provides a way to create, update, delete and ret
 This project was deployed on different platforms namely [vercel](https://vercel.com/) and [render](https://render.com/)
 
 Front end
-* [Realtor.com React Client Gitbub Repository ]()
-* [Deployed live link]()
+* [Realtor.com React Client Gitbub Repository ](https://github.com/sereyatiampati/Realtor-React-Front-end)
+* [Deployed live link](https://realtor-frontend-puce.vercel.app/)
 
 Back end
-* [Realtor.com Rails Server API Gitbub Repository ]()
-* [Deployed live link]()
+* [Realtor.com Rails Server API Gitbub Repository ](https://github.com/sereyatiampati/Realtor-Rails-API-Backend)
+* [Deployed live link](https://realtor-com.onrender.com/listings)
 
 ### Setup Requirements
 * Ruby 3.0.0 or higher
