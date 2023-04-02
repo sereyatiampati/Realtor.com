@@ -39,6 +39,9 @@ function NavBar({user, setUser, isLoggedIn}){
         <li class="nav-item">
         <NavLink to="/" activeClassName="active"> HOME </NavLink>
         </li>
+        <li class="nav-item">
+        <NavLink to="/properties" activeClassName="active"> PROPERTIES </NavLink>
+        </li>
       {
         isLoggedIn ?(
           <>

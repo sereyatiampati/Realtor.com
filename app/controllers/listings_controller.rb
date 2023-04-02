@@ -3,6 +3,7 @@ class ListingsController < ApplicationController
   rescue_from ActiveRecord::RecordInvalid, with: :invalid_entry
   rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
   before_action :authorize
+  skip_before_action :authorize, only: [:index]
 
   # GET /listings
   def index
