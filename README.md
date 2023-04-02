@@ -34,6 +34,14 @@ Back end
 - HTML
 - Ruby on Rails
 
+### How to Set up
+1. Clone this repository `git clone git@github.com:sereyatiampati/Realtor.com.git`
+2. Change directory  to the cloned repo `cd Realtor.com`
+3. Run `bundle install` to install the Rails API dependencies 
+4. Run `rails server` to start the server
+5. Run `npm install --prefix client` to install dependencies for the react frontend application
+6. Run `npm start --prefix client` to start the react frontend 
+
 
 ### Features
 Users
