@@ -79,4 +79,7 @@ App
   ### Contact
   [See contacts](https://github.com/sereyatiampati)
 
+  ### Licence
+  Distributed under the MIT License. See `LICENSE.md` for more information.
+
   Copyright © 2023. All rights reserved.
