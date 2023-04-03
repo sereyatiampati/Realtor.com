@@ -285,3 +285,9 @@ div.carousel-item-b.swiper-slide{
     display: flex;
     padding: 4rem;
   }
+
+  .card-box-a .img-box-a .img-a {
+    height: 500px;
+    width: 450px;
+    object-fit: cover;
+  }
