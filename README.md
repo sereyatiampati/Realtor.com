@@ -39,8 +39,9 @@ Back end
 2. Change directory  to the cloned repo `cd Realtor.com`
 3. Run `bundle install` to install the Rails API dependencies 
 4. Run `rails server` to start the server
-5. Run `npm install --prefix client` to install dependencies for the react frontend application
-6. Run `npm start --prefix client` to start the react frontend 
+5. Run `rails db:migrate db:seed` 
+6. Run `npm install --prefix client` to install dependencies for the react frontend application
+7. Run `npm start --prefix client` to start the react frontend 
 
 
 ### Features
